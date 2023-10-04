@@ -1,3 +1,7 @@
+//Almacenamos lo que escribe el usuario
+var encriptado = document.getElementById("encriptado");
+//Guardamos el boton en una variable para utilizarlo más adelante para un evento
+var buttonclic = document.getElementById("buttonclic");
 function x2ax(X2) {
     //Definimos una variable vacia de x1 para guardar luego las combinaciones de letras
     var X1 = '';

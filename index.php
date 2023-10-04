@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./problema.js"></script>
+    <script src="./codigojunto.js"></script>
     <title>Problema 197</title>
 </head>
 <body>
-    <h1>Programa para descodificar frases</h1>
+    <h1>Descodificador</h1>
     <br>
-    <label>Descodificar frase de X'' a X'</label>
-    <input type="text" id="inputX2aX1" placeholder="Introduce la frase ...">
+    <label for="encriptado">Mensaje Encriptado de X'' a X</label>
+    <input type="text" id="encriptado" name="encriptado" placeholder="Introduce la frase ...">
+    <p id="resultado"></p>
+    <button type="submit" id="buttonclic">Descodificar</button>
     <br>
-    <label>Descodificar frase de X' a X</label>
-    <input type="text" id="inputX1aX" placeholder="Introduce la frase ...">
     <br>
-    <label>Descodificar frase de X'' a X</label>
-    <input type="text" id="inputX2aX" placeholder="Introduce la frase ...">
+    <label for="encriptado2">Mensaje Encriptado de X'' a X'</label>
+    <input type="text" id="encriptado2" name="encriptado2" placeholder="Introduce la frase ...">
+    <p id="resultado2"></p>
+    <button type="submit" id="buttonclic2">Descodificar</button>
     <br>
-    <button onclick="interpretarTexto()">Enviar</button>
+    <br>
+    <label for="encriptado3">Mensaje Encriptado de X' a X</label>
+    <input type="text" id="encriptado3" name="encriptado3" placeholder="Introduce la frase ...">
+    <p id="resultado3"></p>
+    <button type="submit" id="buttonclic3">Descodificar</button>
 </body>
 </html>

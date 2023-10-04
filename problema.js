@@ -1,3 +1,7 @@
+/* //Almacenamos lo que escribe el usuario
+var encriptado = document.getElementById("encriptado");
+//Guardamos el boton en una variable para utilizarlo más adelante para un evento
+var buttonclic = document.getElementById("buttonclic"); */
 // Creamos una funcion de X'' a X'
 function x2ax1(X2) {
   //Definimos una variable vacia de x1(x') para guardar luego las combinaciones de letras
@@ -5,7 +9,7 @@ function x2ax1(X2) {
   //Esto nos dice cuántos caracteres hay en X2
   const largo = X2.length;
   console.log(largo);
-  //Hacemos un bucle donde siempre sera la posicion par lo que metemos en X1
+  //Hacemos un bucle donde siempre será la posicion par lo que metemos en X1
   for (var i = 0; i < largo; i += 2) {
     X1 = X1 + X2[i];
   }
@@ -58,4 +62,39 @@ function desco(X2) {
   return X;
 }
 
-console.log(desco("E. .n.ualn cnhuag aMda  rle")); // Bond, James Bond
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Almacenamos lo que escribe el usuario
+  var encriptado = document.getElementById("encriptado");
+  // Guardamos el botón en una variable para utilizarlo más adelante para un evento
+  var buttonclic = document.getElementById("buttonclic");
+
+  buttonclic.addEventListener("click", () => {
+    var resultado = desco(encriptado.value);
+    document.getElementById("resultado").innerText = resultado;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Almacenamos lo que escribe el usuario
+  var encriptado = document.getElementById("encriptado2");
+  // Guardamos el botón en una variable para utilizarlo más adelante para un evento
+  var buttonclic = document.getElementById("buttonclic2");
+
+  buttonclic.addEventListener("click", () => {
+    var resultado = x2ax1(encriptado.value);
+    document.getElementById("resultado2").innerText = resultado;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Almacenamos lo que escribe el usuario
+  var encriptado = document.getElementById("encriptado3");
+  // Guardamos el botón en una variable para utilizarlo más adelante para un evento
+  var buttonclic = document.getElementById("buttonclic3");
+
+  buttonclic.addEventListener("click", () => {
+    var resultado = x1ax(encriptado.value);
+    document.getElementById("resultado3").innerText = resultado;
+  });
+});
