@@ -77,8 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Guardamos el botón en una variable para utilizarlo más adelante para un evento
   var buttonclic = document.getElementById("buttonclic2");
 
+  //Cuando hacemos click en el boton, inicializa el evento
   buttonclic.addEventListener("click", () => {
+    //Variable llamada "resultado" donde almacena el resultado de la desencriptacion de la frase de X'' a X'
     var resultado = x2ax1(encriptado.value);
+    //
     document.getElementById("resultado2").innerText = resultado;
   });
 });
